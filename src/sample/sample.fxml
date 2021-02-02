@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="857.0" prefWidth="1230.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="bKmeans" layoutX="558.0" layoutY="136.0" mnemonicParsing="false" text="Generate">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+        <AnchorPane layoutX="154.0" layoutY="407.0" prefHeight="615.0" prefWidth="615.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+            <children>
+                <BubbleChart fx:id="beforeBubbleChart" layoutX="31.0" layoutY="52.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                        <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </BubbleChart>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="164.0" layoutY="417.0" prefHeight="615.0" prefWidth="615.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <children>
+                <BubbleChart fx:id="afterBubbleChart" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                        <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </BubbleChart>
+            </children>
+        </AnchorPane>
+        <TextField fx:id="tfNumberOfPoints" layoutX="513.0" layoutY="68.0" promptText="number of points" text="10000">
+         <font>
+            <Font size="19.0" />
+         </font></TextField>
+    </children>
+</AnchorPane>
