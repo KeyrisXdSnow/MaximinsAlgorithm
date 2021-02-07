@@ -8,7 +8,7 @@ import java.util.List;
 public class PointGenerator implements IGenerator{
 
     @Override
-    public List<Point> generate(int amount) {
+    public List<Point> generate(int amount) throws NumberFormatException {
 
         List<Point> points = new ArrayList<>();
 

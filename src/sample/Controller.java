@@ -29,7 +29,7 @@ public class Controller {
     @FXML
     private Button bKmeans;
     @FXML
-    private TextField tfNumberOfPoints,tfNumberOfIterations;
+    private TextField tfNumberOfPoints;
 
     @FXML
     void initialize() {
@@ -47,7 +47,14 @@ public class Controller {
 
     private void generatePoints() {
         pointList.clear();
-        pointList = pointGenerator.generate(Constants.NUMBER_OF_POINTS);
+        try {
+            int pointsAmount = Integer.parseInt(tfNumberOfPoints.getText());
+            pointList = pointGenerator.generate(pointsAmount);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+
+        }
+
     }
 
     private void viewPointsAfterBubbleChart (BubbleChart bubbleChart) {
